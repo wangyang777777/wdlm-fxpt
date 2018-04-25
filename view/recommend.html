@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>推荐商户</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/layui.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body class="layout-body">
+<div class="layout-admin">
+    <div class="header">
+        <div class="ui_header_container clearfix">
+            <div class="logo-icon">
+                <a href="javascript:void(0);"><img src="../images/logo.png" alt="微读联盟" width="84" height="30"></a>
+            </div>
+            <div class="loginbar">
+                <div class="message">
+                    <span class="red-spot"></span>
+                </div>
+                <div class="user">Lorem ipsum.</div>
+                <div class="quit"></div>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="sidebar">
+            <div class="side-scroll">
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="nav-tree fun_nav_list">
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/summary.html" class="cbtn"><span class="nav-icon nav-icon-summary"></span>概要</a></li>
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/data.html" class="cbtn"><span class="nav-icon nav-icon-data"></span>数据</a></li>
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/generalize.html" class="cbtn"><span class="nav-icon nav-icon-generalize"></span>推广</a></li>
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/recommend.html" class="cbtn"><span class="nav-icon nav-icon-recommend"></span>推荐商户</a></li>
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/withdrawDeposits.html" class="cbtn"><span class="nav-icon nav-icon-withdraw"></span>提现</a></li>
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/setting.html" class="cbtn" ><span class="nav-icon nav-icon-setting"></span>设置</a></li>
+                </ul>
+
+            </div>
+            <div class="QQ">
+                <div class="QQ-item"><a href="javascript:void(0);"><span class="QQ-icon"></span>客服QQ</a></div>
+                <div class="QQ-item"><a href="javascript:void(0);" class="QQ-item-gray"><span class="QQ-icon"></span>客服QQ</a></div>
+            </div>
+        </div>
+        <div class="content-main">
+            <div class="recommend-content">
+                <!--表格菜单-->
+                <div class="table-menu clearfix"> <!-- from here -->
+                    <div class="sidebar-l">
+                        <!--日期组件-->
+                        <div class="date-1">
+                            <div class="layui-input-inline"><!-- from here -->
+                                <input type="text" name="date" id="date1" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+                                <span class="input-icon"></span>
+                            </div>
+                        </div>
+                        <span>&nbsp;&nbsp;至&nbsp;&nbsp;</span>
+                        <div class="date-2">
+                            <div class="layui-input-inline"><!-- from here -->
+                                <input type="text" name="date" id="date2" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+                                <span class="input-icon"></span>
+                            </div>
+                        </div>&nbsp;&nbsp;
+
+                        <button class="layui-btn" lay-submit="" lay-filter="">查询</button><!-- from here -->
+
+                    </div>
+                    <div class="sidebar-r">
+                        <div class="get-recommend-link">
+                            <div class="icon-btn clearfix"><!-- from here -->
+                                <span class="left-icon"></span>
+                                <span class="btn-text">获取推广链接</span>
+                            </div>
+                            <div class="code-img-box" style="display: none">
+                                <div class="code-img"></div>
+                                <div class="clearfix mt-20">
+                                    <button class="layui-btn float-l fs-14" >保存二维码</button><!-- from here -->
+                                    <button class="layui-btn float-r fs-14" >复制链接地址</button><!-- from here -->
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!--推荐表格-->
+                <div class="table-view recommend-table-view">
+                    <div>
+                        <table class="layui-table ui_g_table">
+                            <thead>
+                            <tr>
+                                <th>被推荐人</th>
+                                <th>手机号</th>
+                                <th>绑定渠道数量</th>
+                                <th>当前等级</th>
+                                <th>累积分成贡献</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="change-name-box inline-b">
+                                        <input type="text" value="M1380****900" class="unable-edit" readonly>
+                                        <div class="change-btn cbtn" data-toggle="edit"></div><!-- 点击此按钮,移除input的readonly属性 同时移除input的unable-edit类名 同时将提交按钮显示出来,即可进入编辑状态 ,-->
+                                        <button class="layui-btn cbtn" style="display: none" data-toggle="save"></button><!-- from here -->
+                                    </div>
+                                </td>
+                                <td>
+                                    <p>1380****900</p>
+                                </td>
+                                <td>
+                                    <p>45</p>
+                                </td>
+                                <td>
+                                    <p>普通</p>
+                                </td>
+                                <td>
+                                    <p>32,245</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="change-name-box inline-b">
+                                        <input type="text" value="M1380****901901901901901" class="unable-edit" readonly>
+                                        <div class="change-btn cbtn" data-toggle="edit"></div><!-- 点击此按钮,移除input的readonly属性 同时移除input的unable-edit类名 同时将提交按钮显示出来,即可进入编辑状态 ,-->
+                                        <button class="layui-btn cbtn" style="display: none" data-toggle="save"></button><!-- from here -->
+                                    </div>
+                                </td>
+                                <td>
+                                    <p>1380****901</p>
+                                </td>
+                                <td>
+                                    <p>45</p>
+                                </td>
+                                <td>
+                                    <p>普通</p>
+                                </td>
+                                <td>
+                                    <p>32,245</p>
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                        <div class="page-control">
+                            <div id="demo11"><div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-14"><a href="javascript:;" class="layui-laypage-prev" data-page="1">上一页</a><a href="javascript:;" data-page="1">1</a><span class="layui-laypage-curr"><em class="layui-laypage-em"></em><em>2</em></span><a href="javascript:;" data-page="3">3</a><a href="javascript:;" data-page="4">4</a><a href="javascript:;" data-page="5">5</a><span class="layui-laypage-spr">…</span><a href="javascript:;" class="layui-laypage-last" title="尾页" data-page="10">10</a><a href="javascript:;" class="layui-laypage-next" data-page="3">下一页</a></div></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="ui_ft">
+                <p>站内统计数据均会有10分钟左右延迟，请您知晓。</p>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../layui.js"></script>
+<script src="../js/tools.js"></script><!--表单验证-->
+
+<script>
+
+    layui.use(['layer','form', 'element'], function () {
+        var layer = layui.layer,
+            element = layui.element;
+        //初始化
+        Editor.init();
+        Editor.reader();
+
+    });
+    layui.use(['form', 'layedit', 'laydate'], function(){
+        var form = layui.form
+            ,layer = layui.layer;
+
+        //监听提交
+        form.on('submit(demo1)', function(data){
+            layer.alert(JSON.stringify(data.field), {
+                title: '最终的提交信息'
+            });
+            return false;
+        });
+    });
+
+    /*日期*/
+    layui.use(['form', 'layedit', 'laydate'], function() {
+        var form = layui.form
+            ,layer = layui.layer
+            ,laydate = layui.laydate;
+        //日期
+        laydate.render({
+            elem: '#date1'
+        });
+        laydate.render({
+            elem: '#date2'
+        });
+    });
+
+    var Editor = {
+        hasInit: false,
+        itemid: null,
+        init: function () {
+            var me = this;
+            me.hasInit = true;//这里今后可以做回调
+            //初始化-具体执行方法
+            Editor.reader();
+        },
+        reader: function () {
+            var me = this;
+            $(document).on("click", ".cbtn", function () {
+                var ctoggle = $(this).attr("data-toggle");//通用点击属性
+                switch (ctoggle) {
+                    case "choose":
+                        layer.closeAll();
+                        Editor.addCheckedClass(this);//点击元素添加选中样式
+                        break;
+                    case "edit":
+                        layer.closeAll();
+                        Editor.operate("removeClass",$(this).siblings("input"),"unable-edit");//
+                        Editor.operate("removeAttr",$(this).siblings("input"),"readonly");//
+                        Editor.operate("hide",this);//
+                        Editor.operate("show",$(this).siblings(".layui-btn"));//
+                        break;
+                    case "save":
+                        layer.closeAll();
+                        Editor.saveEdit(this);//
+                        break;
+                    default:
+                        break;
+                }
+            });
+        }
+        /*元素操作封装*/
+        , operate: function (operate,ele,propertyValue) {//操作类型,元素,要添加或删除的属性值
+            switch (operate) {
+                /*显示指定元素*/
+                case "show":
+                    $(ele).show();
+                    break;
+                /*隐藏指定元素*/
+                case "hide":
+                    $(ele).hide();
+                    break;
+                /*添加指定元素的指定样式*/
+                case "addClass":
+                    $(ele).addClass(propertyValue);
+                    break;
+                /*移除指定元素的指定样式*/
+                case "removeClass":
+                    $(ele).removeClass(propertyValue);
+                    break;
+                /*移除指定元素的指定属性*/
+                case "removeAttr":
+                    $(ele).removeAttr(propertyValue);
+                    break;
+                /*添加指定元素的指定属性*/
+                case "addAttr":
+                    $(ele).attr(propertyValue);
+                    break;
+                default:
+                    break;
+            }
+        }
+        /*点击元素添加选中样式*/
+        ,addCheckedClass: function (ele) {
+            $(ele).parent().siblings().removeClass("checked");
+            $(ele).parent().addClass("checked");//checked为选中的样式类名
+        }
+        /*点击元素添加选中样式*/
+        ,clearCheckedClass: function (ele) {
+            $(ele).removeClass("checked");//
+        }
+        /*往parent元素中追加ele元素*/
+        ,append: function (ele,parent) {
+            $(parent).append(ele);//
+        }
+        /*点击元素添加选中样式*/
+        ,showTweetDetail: function (ele) {
+            $(ele).siblings("li").hide();
+        }
+        /*保存修改*/
+        ,saveEdit: function (ele) {
+            $(ele).siblings("input").val();
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>提现</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/layui.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body class="layout-body ui_tx_body">
+<div class="layout-admin">
+    <div class="header">
+        <div class="ui_header_container clearfix">
+            <div class="logo-icon">
+                <a href="javascript:void(0);"><img src="../images/logo.png" alt="微读联盟" width="84" height="30"></a>
+            </div>
+            <div class="loginbar">
+                <div class="message">
+                    <span class="red-spot"></span>
+                </div>
+                <div class="user">Lorem ipsum.</div>
+                <div class="quit"></div>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="sidebar">
+            <div class="side-scroll">
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="nav-tree fun_nav_list">
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/summary.html" class="cbtn"><span class="nav-icon nav-icon-summary"></span>概要</a></li>
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/data.html" class="cbtn"><span class="nav-icon nav-icon-data"></span>数据</a></li>
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/generalize.html" class="cbtn"><span class="nav-icon nav-icon-generalize"></span>推广</a></li>
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/recommend.html" class="cbtn"><span class="nav-icon nav-icon-recommend"></span>推荐商户</a></li>
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/withdrawDeposits.html" class="cbtn"><span class="nav-icon nav-icon-withdraw"></span>提现</a></li>
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/setting.html" class="cbtn" ><span class="nav-icon nav-icon-setting"></span>设置</a></li>
+                </ul>
+
+            </div>
+            <div class="QQ">
+                <div class="QQ-item"><a href="javascript:void(0);"><span class="QQ-icon"></span>客服QQ</a></div>
+                <div class="QQ-item"><a href="javascript:void(0);" class="QQ-item-gray"><span class="QQ-icon"></span>客服QQ</a></div>
+            </div>
+        </div>
+
+        <div id="tx-list" class="content-main">
+
+            <div class="ui_hd table-menu clearfix">
+                <div class="ui_left_side">
+                    <div class="ui_dkState_wrap">
+                        <!--引用的bootstrap-select-->
+                        <select class="selectpicker fun_dkState_select" data-width="100%" data-style="ui_radius ui_bgc_FFF">
+                            <option value="0" selected="">全部记录</option>
+                            <option value="1">已申请</option>
+                            <option value="2">待打款</option>
+                            <option value="2">已打款</option>
+                        </select>
+                    </div>
+                    <p class="ui_limit">未提现： <span class="fun_allMoney">44.5</span>元</p>
+                    <p class="ui_limit">佣金：<span class="fun_yj">245</span>元</p>
+                    <p class="ui_limit">推荐分成：<span class="fun_fc">20</span>元</p>
+
+                </div>
+
+                <div class="ui_right_side">
+                    <!-- 账户设置按钮 -->
+                    <div class="ui_g_ico_btn ui_accountSetting_btn cbtn" data-toggle="account-set-btn">
+                        <span class="ui_left_icon"></span>
+                        <span class="ui_btn_text">账户设置</span>
+                    </div>
+                    <!-- 提现按钮 -->
+                    <!--<div class="ui_g_ico_btn ui_tixian_btn" data-toggle="modal" data-target=".fun_tx_application">-->
+                    <div class="ui_g_ico_btn ui_tixian_btn cbtn" data-toggle="tx-btn" >
+                        <span class="ui_left_icon"></span>
+                        <span class="ui_btn_text">提现</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--渠道列表-->
+            <div class="ui_bd">
+                <table class="layui-table ui_g_table" lay-even="" lay-skin="nob">
+                    <thead>
+                    <tr>
+                        <th>时间</th>
+                        <th>申请金额</th>
+                        <th>包含佣金</th>
+                        <th>包含分成</th>
+                        <th>状态</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <p>2018.02.24 12:45</p>
+                        </td>
+                        <td>
+                            <p>¥89</p>
+                        </td>
+                        <td>
+                            <p>¥89</p>
+                        </td>
+                        <td>
+                            <p>¥89</p>
+                        </td>
+                        <td>
+
+                            <div class="ui_g_ico_text ui_dkState_ysq">
+                                <span class="ui_left_icon ui_left_icon_ysq"></span>
+                                <span class="ui_btn_text ui_btn_text_ysq">已申请</span>
+                            </div>
+
+                            <div class="ui_g_ico_text ui_dkState_ddk">
+                                <span class="ui_left_icon ui_left_icon_ddk"></span>
+                                <span class="ui_btn_text ui_btn_text_ddk">待打款</span>
+                            </div>
+
+                            <div class="ui_g_ico_text ui_dkState_ydk">
+                                <span class="ui_left_icon ui_left_icon_ydk"></span>
+                                <span class="ui_btn_text ui_btn_text_ydk">已打款</span>
+                            </div>
+
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+                <div class="ui_g_pagination">
+                    <div id="demo11"><div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-14"><a href="javascript:;" class="layui-laypage-prev" data-page="1">上一页</a><a href="javascript:;" data-page="1">1</a><span class="layui-laypage-curr"><em class="layui-laypage-em"></em><em>2</em></span><a href="javascript:;" data-page="3">3</a><a href="javascript:;" data-page="4">4</a><a href="javascript:;" data-page="5">5</a><span class="layui-laypage-spr">…</span><a href="javascript:;" class="layui-laypage-last" title="尾页" data-page="10">10</a><a href="javascript:;" class="layui-laypage-next" data-page="3">下一页</a></div></div>
+                </div>
+            </div>
+
+            <div class="ui_ft">
+                <p>站内统计数据均会有10分钟左右延迟，请您知晓。</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="../js/jquery-1.7.2.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/bootstrap-select.min.js"></script>
+<script src="../layui.js"></script>
+<script src="../js/tools.js"></script><!--表单验证-->
+<script>
+    layui.use(['layer','form', 'element'], function () {
+        var layer = layui.layer,
+            element = layui.element;
+        //初始化
+        Editor.init();
+        // Editor.reader();
+    });
+
+    var Editor = {
+        hasInit: false,
+        itemid: null,
+        init: function () {
+            var me = this;
+            me.hasInit = true;//这里今后可以做回调
+            //初始化-具体执行方法
+            Editor.reader();
+            Editor.pageInit();
+
+        },
+        reader: function () {
+
+            var me = this;
+
+            $(document).on("click", ".cbtn", function () {
+                var ctoggle = $(this).attr("data-toggle");//通用点击属性
+                switch (ctoggle) {
+                    case "tx-btn":
+                        layer.closeAll();
+
+                        //根据条件判断显示某一个模态框
+                        Editor.showFirstSetAccount();
+
+                        break;
+                    case "account-set-btn":
+                        layer.closeAll();
+
+                        //根据条件判断显示某一个模态框
+                        // Editor.showZFBSetAccount();
+                        Editor.showYHKSetAccount();
+                        // Editor.showYHKAccountAlter();
+
+
+                        break;
+                    default:
+                        break;
+                }
+            });
+        },
+        pageInit:function () {
+            var me = this;
+            $(document).on("click",".fun_dyna",function () {
+                var dynamic = $(this).attr("data-dynamic");//页面通用点击属性
+                switch (dynamic) {
+                    case "all_yj":
+                        Editor.all_yongjin();//提现全部佣金
+                        Editor.tx_eventAfter();
+                        break;
+                    case "all_fc":
+                        Editor.all_fencheng();//提现全部分成
+                        Editor.tx_eventAfter();
+                        break;
+                    default:
+                        break;
+                }
+            });
+            /*在modal框加载同时，提供几个方法用来控制modal框*/
+            /*#tx_application模态框关闭之后触发，清空表单*/
+            $('#tx_application').on('hidden.bs.modal', function (e) {
+                $(".fun_yj_input").val("");
+                $(".fun_fc_input").val("");
+                Editor.tx_lt200();
+            });
+            /*#tx_application模态框 show 方法调用时立即触发*/
+            $('#tx_application').on('show.bs.modal', function (e) {
+                Editor.tx_input_trigger();
+                // Editor.showFirstSetAccount();
+            });
+            /*在#set_account模态框 show 方法调用时立即触发*/
+            $('#set_account').on('show.bs.modal', function (e) {
+
+
+            });
+            /*在#set_account模态框完全隐藏之后触发*/
+            $('#set_account').on('hidden.bs.modal', function (e) {
+
+
+
+            });
+            /*fun_dkState_select select选中事件*/
+            $('.fun_dkState_select').on('changed.bs.select',function(e){
+
+
+            });
+        },
+        /*提现全部佣金*/
+        all_yongjin:function () {
+            //获取佣金额度
+            var yj = $(".fun_yj").text();
+            $(".fun_yj_input").val(yj);
+        },
+        /*提现全部佣金*/
+        all_fencheng:function () {
+            //获取分成额度
+            var fc = $(".fun_fc").text();
+            $(".fun_fc_input").val(fc);
+        },
+        /*提现表单输入状态变化事件oninput*/
+        tx_input_trigger:function () {
+            var inputs =$("#tx_application input.fun_input");//获取两个表单元素
+            //为两个表单元素循环绑定事件
+            $.each(inputs,function(index,item){
+                $(item).on("input",function(e){
+                    Editor.tx_eventAfter();
+                });
+            });
+        },
+        /*提现窗口事件触发后调用（包括input的事件和'全部提现'按钮的点击事件）*/
+        tx_eventAfter:function () {
+            var yj_val = $(".fun_yj_input").val();
+            var fc_val = $(".fun_fc_input").val();
+            var sum = Number(yj_val)+Number(fc_val);
+            if(sum >= 200){
+                Editor.tx_gt200(sum);
+            }else{
+                Editor.tx_lt200(sum);
+            }
+        },
+        /*提现大于200元时的展示效果*/
+        tx_gt200:function (sum) {
+            $(".fun_hint").hide();
+            $(".fun_total").show();
+            $(".fun_total_num").text(sum);
+            $(".fun_shtx_btn").removeClass("ui_g_btn_disabled");
+            $(".fun_shtx_btn").addClass("ui_g_btn_yellow");
+            $('.fun_shtx_btn').attr("disabled","");
+        },
+        /*提现小于200元时的展示效果*/
+        tx_lt200:function (sum) {
+            $(".fun_total").hide();
+            $(".fun_hint").show();
+            $(".fun_shtx_btn").removeClass("ui_g_btn_yellow");
+            $(".fun_shtx_btn").addClass("ui_g_btn_disabled");
+            $('.fun_shtx_btn').attr("disabled","disabled");
+        }
+
+
+        /*显示首次设置账号提示*/
+        ,showFirstSetAccount:function () {
+            $('#set-account-tip').modal("show");
+        }
+        /*显示金额小于200元时弹出提示框*/
+        ,showGT200:function () {
+            $('#tx-limit-tip').modal("show");
+        }
+        /*显示提现金额输入框*/
+        ,showTXInput:function () {
+            $('#tx_application').modal("show");
+        }
+
+        /*支付宝tab显示*/
+        ,showZFBTabShow:function () {
+            $(".fun_zfb_tab").siblings("li").removeClass("active");
+            $(".fun_zfb_tab").addClass("active");
+            $(".fun_zfb_tab_pane").siblings("div.tab-pane").removeClass("active");
+            $(".fun_zfb_tab_pane").addClass("active");
+        }
+        ,showYHKTabShow:function () {
+            $(".fun_yhk_tab").siblings("li").removeClass("active");
+            $(".fun_yhk_tab").addClass("active");
+            $(".fun_yhk_tab_pane").siblings("div.tab-pane").removeClass("active");
+            $(".fun_yhk_tab_pane").addClass("active");
+        }
+
+        /*显示支付宝账号设置*/
+        ,showZFBSetAccount:function () {
+            $('#set_account').modal("show");
+            Editor.showZFBTabShow();
+        }
+        /*显示银行卡账号设置*/
+        ,showYHKSetAccount:function () {
+            $('#set_account').modal("show");
+            Editor.showYHKTabShow();
+        }
+
+        /*显示支付宝已绑定状态*/
+        ,showZFBAccountShow:function () {
+            $('#account_show').modal("show");
+            Editor.showZFBTabShow();
+        }
+        /*显示银行卡已绑定状态*/
+        ,showYHKAccountShow:function () {
+            $('#account_show').modal("show");
+            Editor.showYHKTabShow();
+        }
+
+        /*显示支付宝账号修改确认*/
+        ,showZFBAccountAlter:function () {
+            $('#account_alter').modal("show");
+            Editor.showZFBTabShow();
+        }
+        /*显示银行卡账号修改确认*/
+        ,showYHKAccountAlter:function () {
+            $('#account_alter').modal("show");
+            Editor.showYHKTabShow();
+        }
+    }
+</script>
+
+</body>
+</html>
+
+<!--首次设置账号提示-->
+<div id="set-account-tip" class="modal" role="dialog">
+    <div class="modal-dialog" role="document" aria-hidden="true">
+
+        <!-- 首次设置账号提示 -->
+        <div class="modal-content ui_first_set_account fun_first_set_account">
+            <p>先请您移步设置一下收款账号</p>
+            <div class="clearfix mb-20">
+                <!-- 立即设置按钮 -->
+                <button class="ui_g_btn ui_accountSetting_btn ui_g_btn_yellow float-l" data-toggle="modal" data-target=".fun_set_account" data-dismiss="modal">立即设置</button>
+                <!-- 再等等按钮 -->
+                <button class="ui_g_btn ui_wait ui_g_btn_white float-r" data-dismiss="modal">再等等</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!--小于200元弹出提现提示框-->
+<div id="tx-limit-tip" class="modal" role="dialog">
+    <div class="modal-dialog" role="document" aria-hidden="true">
+
+        <!--小于200元弹出提现提示框-->
+        <div class="modal-content ui_gt200 fun_gt200">
+            <p>财务MM很辛苦   <span>请您大于200元</span>   时再提现！</p>
+            <div>
+                <!-- 知道了 -->
+                <button class="ui_g_btn ui_g_btn_yellow" data-dismiss="modal">知道了</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!--申请提现-->
+<div id="tx_application" class="modal fun_tx_application" role="dialog">
+    <div class="modal-dialog" role="document" aria-hidden="true">
+
+        <!--提现框-->
+        <div class="modal-content fun_tx_input">
+            <div class="modal-header ui_hd">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <p>申请提现</p>
+            </div>
+            <div class="ui_bd">
+                <form action="">
+                    <div>
+                        <input type="text" placeholder="最多可提佣金：￥25.5" class="fun_yj_input fun_input">
+                        <span class="fun_dyna" data-dynamic="all_yj">全部提现</span>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="最多可提分成：￥20" class="fun_fc_input fun_input">
+                        <span class="fun_dyna" data-dynamic="all_fc">全部提现</span>
+                    </div>
+                    <p class="fun_hint">最少合计需超过200元</p>
+                    <p class="ui_hj fun_total" style="display: none">合计：¥<span class="fun_total_num">210</span></p>
+                    <div class="clearfix">
+                        <button class="ui_g_btn ui_g_btn_disabled float-l fun_shtx_btn" disabled>申请提现</button>
+                        <button class="ui_g_btn float-r" data-dismiss="modal">关闭</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!--账户设置页面-->
+<div id="set_account" class="modal ui_account-modal fun_set_account" role="dialog">
+    <div class="modal-dialog" role="document" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header ui_hd">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <ul class="ui_nav-tabs">
+                    <li class="fun_zfb_tab active"><a href="#zfb_tab_pane" data-toggle="tab">支付宝</a></li>
+                    <li class="fun_yhk_tab"><a href="#yhk_tab_pane" data-toggle="tab">银行卡</a></li>
+                </ul>
+            </div>
+            <div class="ui_bd">
+                <div class="tab-content">
+                    <div class="tab-pane ui_tab_pane fun_zfb_tab_pane active" id="zfb_tab_pane">
+
+                        <div class="ui_account_input fun_zfb_account_input">
+                            <form action="">
+                                <p>请输入您的支付宝账号</p>
+                                <div>
+                                    <div>
+                                        <input type="text" placeholder="请输入支付宝账号">
+                                    </div>
+                                    <div>
+                                        <input type="text" placeholder="请输入您支付宝中的姓名">
+                                    </div>
+                                    <div class="ui_error_tip">
+                                        <span class="ui_error_tip_icon"></span>
+                                        <span>您输入的账户有误，请验证后重新输入</span>
+                                    </div>
+                                    <div class="clearfix">
+                                        <button class="ui_g_btn ui_g_btn_yellow float-l">保存</button>
+                                        <button class="ui_g_btn float-r" data-dismiss="modal">关闭</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane ui_tab_pane fun_yhk_tab_pane" id="yhk_tab_pane">
+
+                        <div class="ui_account_input fun_yhk_account_input">
+                            <form action="">
+                                <p>请输入您的银行卡信息(仅支持对公账户)</p>
+                                <div>
+                                    <div>
+                                        <input type="text" placeholder="请输入开户行">
+                                    </div>
+                                    <div>
+                                        <input type="text" placeholder="请输入开户名">
+                                    </div>
+                                    <div>
+                                        <input type="text" placeholder="请输入卡号">
+                                    </div>
+                                    <div class="ui_error_tip">
+                                        <span class="ui_error_tip_icon"></span>
+                                        <span>您输入的账户有误，请验证后重新输入</span>
+                                    </div>
+                                    <div class="clearfix">
+                                        <button class="ui_g_btn ui_g_btn_yellow float-l">保存</button>
+                                        <button class="ui_g_btn float-r" data-dismiss="modal">关闭</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--账户信息展示-->
+<div id="account_show" class="modal ui_account-modal" role="dialog">
+    <div class="modal-dialog" role="document" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header ui_hd">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <ul class="ui_nav-tabs">
+                    <li class="fun_zfb_tab active"><a href="#zfb_tab_pane2" data-toggle="tab">支付宝</a></li>
+                    <li class="fun_yhk_tab"><a href="#yhk_tab_pane2" data-toggle="tab">银行卡</a></li>
+                </ul>
+            </div>
+            <div class="ui_bd">
+                <div class="tab-content">
+                    <div class="tab-pane ui_tab_pane fun_zfb_tab_pane active" id="zfb_tab_pane2">
+
+                        <div class="ui_account_show fun_zfb_account_show">
+                            <div>
+                                <p>您当前已绑定如下支付宝账号</p>
+                                <p>账&nbsp;&nbsp;&nbsp;&nbsp;户&nbsp;&nbsp;&nbsp;&nbsp;名：<span>xiaoming.qq.com</span></p>
+                                <p>支付宝姓名：<span>微读</span></p>
+                            </div>
+                            <p><span>如需修改请联系在线客服</span></p>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane ui_tab_pane fun_yhk_tab_pane" id="yhk_tab_pane2">
+
+                        <div class="ui_account_show fun_yhk_account_show">
+                            <div>
+                                <p>您当前已绑定如下银行账号</p>
+                                <p>卡&nbsp;&nbsp;&nbsp;&nbsp;号：<span>6226 8801 3628 601</span></p>
+                                <p>开户名：<span>微读</span></p>
+                            </div>
+                            <p><span>如需修改请联系在线客服</span></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--账户修改确认-->
+<div id="account_alter" class="modal ui_account-modal" role="dialog">
+    <div class="modal-dialog" role="document" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header ui_hd">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <ul class="ui_nav-tabs">
+                    <li class="fun_zfb_tab active"><a href="#zfb_tab_pane3" data-toggle="tab">支付宝</a></li>
+                    <li class="fun_yhk_tab"><a href="#yhk_tab_pane3" data-toggle="tab">银行卡</a></li>
+                </ul>
+            </div>
+            <div class="ui_bd">
+                <div class="tab-content">
+                    <div class="tab-pane ui_tab_pane fun_zfb_tab_pane active" id="zfb_tab_pane3">
+
+                        <div class="ui_account_show ui_account_alter fun_zfb_account_alter">
+                            <div>
+                                <p>支付宝账号修改确认</p>
+                                <p>已修改为：<span>xiaoming.qq.com</span></p>
+                                <p>对应姓名：<span>微读</span></p>
+                            </div>
+                            <p><span>正确无误请“确认更改”，如有问题请联系在线客服</span></p>
+                            <div>
+                                <button class="ui_g_btn ui_g_btn_yellow" data-dismiss="modal">确认变更</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane ui_tab_pane fun_yhk_tab_pane" id="yhk_tab_pane3">
+
+                        <div class="ui_account_show ui_account_alter fun_yhk_account_alter">
+                            <div>
+                                <p>银行卡账号修改确认</p>
+                                <p>已修改为：<span>6226 8801 3628 601</span></p>
+                                <p>对应姓名：<span>微读</span></p>
+                            </div>
+                            <p><span>正确无误请“确认更改”，如有问题请联系在线客服</span></p>
+                            <div>
+                                <button class="ui_g_btn ui_g_btn_yellow" data-dismiss="modal">确认变更</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

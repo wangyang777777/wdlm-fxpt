@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数据</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/layui.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body class="layout-body">
+<body class="layout-body">
+<div class="layout-admin">
+    <div class="header">
+        <div class="ui_header_container clearfix">
+            <div class="logo-icon">
+                <a href="javascript:void(0);"><img src="../images/logo.png" alt="微读联盟" width="84" height="30"></a>
+            </div>
+            <div class="loginbar">
+                <div class="message">
+                    <span class="red-spot"></span>
+                </div>
+                <div class="user">Lorem ipsum.</div>
+                <div class="quit"></div>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="sidebar">
+            <div class="side-scroll">
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="nav-tree fun_nav_list">
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/summary.html" class="cbtn"><span class="nav-icon nav-icon-summary"></span>概要</a></li>
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/data.html" class="cbtn"><span class="nav-icon nav-icon-data"></span>数据</a></li>
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/generalize.html" class="cbtn"><span class="nav-icon nav-icon-generalize"></span>推广</a></li>
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/recommend.html" class="cbtn"><span class="nav-icon nav-icon-recommend"></span>推荐商户</a></li>
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/withdrawDeposits.html" class="cbtn"><span class="nav-icon nav-icon-withdraw"></span>提现</a></li>
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/setting.html" class="cbtn" ><span class="nav-icon nav-icon-setting"></span>设置</a></li>
+                </ul>
+
+            </div>
+            <div class="QQ">
+                <div class="QQ-item"><a href="javascript:void(0);"><span class="QQ-icon"></span>客服QQ</a></div>
+                <div class="QQ-item"><a href="javascript:void(0);" class="QQ-item-gray"><span class="QQ-icon"></span>客服QQ</a></div>
+            </div>
+        </div>
+
+        <div id="data_page_content" class="content-main">
+            <div class="ui_hd clearfix">
+                <div class="ui_tab_box float-l">
+                    <ul class="ui_tj_tab clearfix">
+                        <li class="active"><a href="#qdxg" class="fun_dyna" data-toggle="tab" data-dynamic="tab">渠道效果统计</a></li>
+                        <li class=""><a href="#scxg" class="fun_dyna" data-toggle="tab" data-dynamic="tab">素材效果统计</a></li>
+                    </ul>
+                </div>
+                <div class="float-r">
+                    <div class="ui_g_select">
+                        <!--引用的bootstrap-select-->
+                        <select class="selectpicker fun_dkState_select" data-width="100%" data-style="ui_radius ui_bgc_FFF">
+                            <option value="0" selected="">全部记录</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="2">3</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content ui_bd">
+                <!--渠道效果统计-->
+                <div id="qdxg" class="tab-pane ui_qdxg active">
+                    <ul class="ui_label clearfix">
+                        <li class="ui_date">
+                            <div class="ui_date_title">今日</div>
+                            <div class="ui_date_content">
+                                <p>新增阅读用户：<span>300</span>人</p>
+                                <p>其中付费用户：<span>120</span>人</p>
+                                <p>获得佣金：￥<span>863.8</span></p>
+                                <p>普通充值：￥<span>863.8</span></p>
+                                <p>VIP包月：￥<span>863.8</span></p>
+                            </div>
+                        </li>
+                        <li class="ui_date">
+                            <div class="ui_date_title">昨日</div>
+                            <div class="ui_date_content">
+                                <p>新增阅读用户：<span>300</span>人</p>
+                                <p>其中付费用户：<span>120</span>人</p>
+                                <p>获得佣金：￥<span>863.8</span></p>
+                                <p>普通充值：￥<span>863.8</span></p>
+                                <p>VIP包月：￥<span>863.8</span></p>
+                            </div>
+                        </li>
+                        <li class="ui_date">
+                            <div class="ui_date_title">本月</div>
+                            <div class="ui_date_content">
+                                <p>新增阅读用户：<span>300</span>人</p>
+                                <p>其中付费用户：<span>120</span>人</p>
+                                <p>获得佣金：￥<span>863.8</span></p>
+                                <p>普通充值：￥<span>863.8</span></p>
+                                <p>VIP包月：￥<span>863.8</span></p>
+                            </div>
+                        </li>
+                        <li class="ui_date">
+                            <div class="ui_date_title">历史</div>
+                            <div class="ui_date_content">
+                                <p>新增阅读用户：<span>300</span>人</p>
+                                <p>其中付费用户：<span>120</span>人</p>
+                                <p>获得佣金：￥<span>863.8</span></p>
+                                <p>普通充值：￥<span>863.8</span></p>
+                                <p>VIP包月：￥<span>863.8</span></p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="ui_table">
+                        <table class="ui_qdxg_table layui-table ui_g_table mt-20" lay-filter="test">
+                            <thead>
+                            <tr>
+                                <th>日期</th>
+                                <th>阅读新增</th>
+                                <th>付费人数</th>
+                                <th>充值笔数</th>
+                                <th>充值金额</th>
+                                <th>Vip包月金额</th>
+                                <th>Vip包月笔数</th>
+                                <th>分成比例(等级)</th>
+                                <th>可得佣金</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <p>2017.12.26</p>
+                                </td>
+                                <td>
+                                    <p>2,245</p>
+                                </td>
+                                <td>
+                                    <p>1,245</p>
+                                </td>
+                                <td>
+                                    <p>1245</p>
+                                </td>
+                                <td>
+                                    <p>¥89</p>
+                                </td>
+                                <td>
+                                    <p>￥2,245</p>
+                                </td>
+                                <td>
+                                    <p>21.5%</p>
+                                </td>
+                                <td class="ui_fcbl_zs">
+                                    <p>90% <span>(钻石级)</span></p>
+                                </td>
+                                <td>
+                                    <p>￥2,245</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <p>2017.12.26</p>
+                                </td>
+                                <td>
+                                    <p>2,245</p>
+                                </td>
+                                <td>
+                                    <p>1,245</p>
+                                </td>
+                                <td>
+                                    <p>1245</p>
+                                </td>
+                                <td>
+                                    <p>¥89</p>
+                                </td>
+                                <td>
+                                    <p>￥2,245</p>
+                                </td>
+                                <td>
+                                    <p>21.5%</p>
+                                </td>
+                                <td class="ui_fcbl_bj">
+                                    <p>80% <span>(白金级)</span></p>
+                                </td>
+                                <td>
+                                    <p>￥2,245</p>
+                                </td>
+                            </tr>
+
+
+                            </tbody>
+                        </table>
+                        <!--引用的分页组件-->
+                        <div class="ui_g_pagination" aria-hidden=”true” data-backdrop=”static”>
+                            <div id="" class=""><div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-14"><a href="javascript:;" class="layui-laypage-prev" data-page="1">上一页</a><a href="javascript:;" data-page="1">1</a><span class="layui-laypage-curr"><em class="layui-laypage-em"></em><em>2</em></span><a href="javascript:;" data-page="3">3</a><a href="javascript:;" data-page="4">4</a><span class="layui-laypage-spr">…</span><a href="javascript:;" class="layui-laypage-last" title="尾页" data-page="10">10</a><a href="javascript:;" class="layui-laypage-next" data-page="3">下一页</a></div></div>
+                        </div>
+                    </div>
+                </div>
+                <!--素材效果统计-->
+                <div id="scxg" class="tab-pane ui_scxg ">
+                    <div class="ui_label clearfix">
+                        <div class="ui_month">
+                            <div class="ui_month_title">本月</div>
+                            <div class="ui_month_content">
+                                <p>
+                                    <span>热度最高入口：</span>
+                                    <span title="《绝世武神》 推文 第五章《绝世武神》 推文 第五章">《绝世武神》 推文 第五章《绝世武神》 推文 第五章</span>
+                                    <span>51,234人</span>
+                                </p>
+                                <p>
+                                    <span>付费最高入口：</span>
+                                    <span title="《绝世武神》 推文 第五章《绝世武神》 推文 第五章">《绝世武神》 推文 第五章</span>
+                                    <span>￥1,242</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ui_month">
+                            <div class="ui_month_title">上月</div>
+                            <div class="ui_month_content">
+                                <p><span>热度最高入口：</span><span class="ui_rk">《绝世武神》 推文 第五章</span><span>51,234人</span></p>
+                                <p><span>付费最高入口：</span><span class="ui_rk">《绝世武神》 推文 第五章</span><span>￥1,242</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui_table">
+                        <table class="ui_scxg_table layui-table ui_g_table mt-20" lay-filter="test">
+                            <thead>
+                            <tr>
+                                <th>流量入口</th>
+                                <th>对应渠道</th>
+                                <th>累积点击次数</th>
+                                <th>累积阅读人次</th>
+                                <th>累积充值额</th>
+                                <th>作者其他作品</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <p title="《绝世武神》第三章绝世武神》第三章绝世武神》第三章">《绝世武神》第三章绝世武神》第三章绝世武神》第三章</p>
+                                </td>
+                                <td>
+                                    <p>清香书阁</p>
+                                </td>
+                                <td>
+                                    <p>45</p>
+                                </td>
+                                <td>
+                                    <p>1241235</p>
+                                </td>
+                                <td>
+                                    <p>¥8139</p>
+                                </td>
+                                <td>
+                                    <div class="">
+                                        <span class="ui_more_btn fun_dyna" data-toggle="modal" data-dynamic="showMore"></span>
+                                        <div class="modal ui_more_modal fun_more_modal">
+                                            <div class="modal-content ui_more_modal_content fun_more_modal_content">
+                                                <ul class="ui_more_list fun_more_list">
+                                                    <li><a href="#" data-dismiss="modal" title="《绝世战神绝世战神绝世战神绝世战神》">《绝世战神绝世战神绝世战神绝世战神》</a></li>
+                                                    <li><a href="#" data-dismiss="modal" title="《绝世战神绝世战神绝世战神绝世战神》">《绝世战神》</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p title="《绝世武神》第三章绝世武神》第三章绝世武神》第三章">《绝世武神》第三章绝世武神》第三章绝世武神》第三章</p>
+                                </td>
+                                <td>
+                                    <p>清香书阁</p>
+                                </td>
+                                <td>
+                                    <p>45</p>
+                                </td>
+                                <td>
+                                    <p>1241235</p>
+                                </td>
+                                <td>
+                                    <p>¥8139</p>
+                                </td>
+                                <td>
+                                    <div class="">
+                                        <span class="ui_more_btn fun_dyna" data-toggle="modal" data-dynamic="showMore"></span>
+                                        <div class="modal ui_more_modal fun_more_modal">
+                                            <div class="modal-content ui_more_modal_content fun_more_modal_content">
+                                                <ul class="ui_more_list fun_more_list">
+                                                    <li><a href="#" data-dismiss="modal" title="《绝世战神绝世战神绝世战神绝世战神》">《绝世战神绝世战神绝世战神绝世战神》</a></li>
+                                                    <li><a href="#" data-dismiss="modal" title="《绝世战神绝世战神绝世战神绝世战神》">《绝世战神》</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+
+
+                            </tbody>
+                        </table>
+                        <!--引用的分页组件-->
+                        <div class=" ui_g_pagination" aria-hidden=”true” data-backdrop=”static”>
+                            <div id="" class=""><div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-14"><a href="javascript:;" class="layui-laypage-prev" data-page="1">上一页</a><a href="javascript:;" data-page="1">1</a><span class="layui-laypage-curr"><em class="layui-laypage-em"></em><em>2</em></span><a href="javascript:;" data-page="3">3</a><a href="javascript:;" data-page="4">4</a><span class="layui-laypage-spr">…</span><a href="javascript:;" class="layui-laypage-last" title="尾页" data-page="10">10</a><a href="javascript:;" class="layui-laypage-next" data-page="3">下一页</a></div></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="ui_ft">
+                <p>站内统计数据均会有10分钟左右延迟，请您知晓。</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="../js/jquery-1.7.2.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/bootstrap-select.min.js"></script>
+<script src="../layui.js"></script>
+<script src="../js/tools.js"></script><!--表单验证-->
+<script>
+    layui.use(['layer','form', 'element'], function () {
+        var layer = layui.layer,
+            element = layui.element;
+        //初始化
+        Editor.init();
+
+    });
+
+    var Editor = {
+        hasInit: false,
+        itemid: null,
+        init: function () {
+            var me = this;
+            me.hasInit = true;//这里今后可以做回调
+            //初始化-具体执行方法
+            Editor.reader();
+            Editor.pageInit();
+        },
+        reader: function () {
+
+            var me = this;
+
+            $(document).on("click", ".cbtn", function () {
+                var ctoggle = $(this).attr("data-toggle");//通用点击属性
+                switch (ctoggle) {
+                    case "":
+                        layer.closeAll();
+                        break;
+                    default:
+                        break;
+                }
+            });
+        },
+        pageInit: function () {
+            var me = this;
+            $(document).on("click", ".fun_dyna", function (e) {
+                var dynamic = $(this).attr("data-dynamic");//页面通用点击属性
+                switch (dynamic) {
+                    case "showMore":
+                        Editor.showMore(e);
+                        break;
+                    case "tab":
+                        Editor.addHrefToUrl($(this));
+                        break;
+                    default:
+                        break;
+                }
+            });
+
+            Editor.toQdxgTab(Editor.getHash());
+        }
+        /*获取事件触发的位置*/
+        ,showMore:function (e) {
+            Editor.setLocation(e);
+        }
+        /*设置作者其他作品显示框的位置并显示*/
+        ,setLocation:function (e) {//必须传入事件参数e
+            var trigger = $(e.target);
+            var top = trigger.offset().top;//获取触发元素的位置
+            var left = trigger.offset().left;
+            var moreEle = trigger.siblings(".fun_more_modal");
+            var moreContentEle = moreEle.children(".fun_more_modal_content");//获取模态框元素
+            moreEle.modal('show');//显示模态框
+            var width = moreContentEle.outerWidth()/2;//获取模态框的宽高
+            var height = moreContentEle.outerHeight();
+            var setTop = top - height;
+            var setLeft = left - width;
+            moreContentEle.offset({ top: setTop, left: setLeft });//设置显示框的位置
+        }
+        /*点击tab添加添加href到url*/
+        ,addHrefToUrl:function (ele) {
+            var hrefStr = $(ele).attr("href").substring(1);
+            location.hash="hash="+hrefStr;
+        }
+        /*切换到渠道效果统计*/
+        ,toQdxgTab:function (param) {
+            switch (param) {
+                case "#hash=qdxg":
+                    var liEle = $("a[href='#qdxg']");
+                    $(liEle).trigger("click");
+                    break;
+                case "#hash=scxg":
+                    var liEle = $("a[href='#scxg']");
+                    $(liEle).trigger("click");
+                    break;
+                default:
+                    break;
+            }
+        }
+        /*切换到渠道效果统计*/
+        ,getHash:function (){
+            var hash = window.location.hash;
+            return hash;
+        }
+
+    }
+
+</script>
+
+</body>
+</html>
+
+
+
+
+

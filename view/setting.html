@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>设置</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/layui.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body class="layout-body">
+<div class="layout-admin">
+    <div class="header">
+        <div class="ui_header_container clearfix">
+            <div class="logo-icon">
+                <a href="javascript:void(0);"><img src="../images/logo.png" alt="微读联盟" width="84" height="30"></a>
+            </div>
+            <div class="loginbar">
+                <div class="message">
+                    <span class="red-spot"></span>
+                </div>
+                <div class="user">Lorem ipsum.</div>
+                <div class="quit"></div>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="sidebar">
+            <div class="side-scroll">
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="nav-tree fun_nav_list">
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/summary.html" class="cbtn"><span class="nav-icon nav-icon-summary"></span>概要</a></li>
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/data.html" class="cbtn"><span class="nav-icon nav-icon-data"></span>数据</a></li>
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/generalize.html" class="cbtn"><span class="nav-icon nav-icon-generalize"></span>推广</a></li>
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/recommend.html" class="cbtn"><span class="nav-icon nav-icon-recommend"></span>推荐商户</a></li>
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/withdrawDeposits.html" class="cbtn"><span class="nav-icon nav-icon-withdraw"></span>提现</a></li>
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/setting.html" class="cbtn" ><span class="nav-icon nav-icon-setting"></span>设置</a></li>
+                </ul>
+
+            </div>
+            <div class="QQ">
+                <div class="QQ-item"><a href="javascript:void(0);"><span class="QQ-icon"></span>客服QQ</a></div>
+                <div class="QQ-item"><a href="javascript:void(0);" class="QQ-item-gray"><span class="QQ-icon"></span>客服QQ</a></div>
+            </div>
+        </div>
+
+        <div id="channel-list" class="content-main">
+
+            <div class="ui_hd table-menu clearfix">
+                <div class="ui_left_side">
+                    <h3>渠道列表</h3>
+                </div>
+
+                <div class="ui_right_side">
+                    <!-- 新增按钮 -->
+                    <div id="new-channel-btn" class="btn-group ui_g_ico_btn fun_dyna" data-dynamic="addNew" data-toggle="modal" data-target=".fun_add_new_channel">
+                    <!--<div id="new-channel-btn" class="btn-group ui_g_ico_btn fun_dyna" data-dynamic="addNew" data-toggle="modal" data-target=".bs-example-modal-lg">-->
+                        <span class="ui_left_icon"></span>
+                        <span class="ui_btn_text">新增</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--渠道列表-->
+            <div class="ui_bd">
+                <table class="layui-table ui_g_table ui_channel_table" lay-even="" lay-skin="nob">
+                    <thead>
+                        <tr>
+                            <th>类型</th>
+                            <th>渠道名称</th>
+                            <th>备注</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p class="fun_type">认证服务号</p>
+                            </td>
+                            <td>
+                                <p class="fun_channel_name">清新书阁1</p>
+                            </td>
+                            <td>
+                                <p class="fun_remark">清新书阁1清新书阁1</p>
+                            </td>
+                            <td class="ui_operate">
+                                <div class="btn-group">
+                                    <span class="ui_operate_btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    </span>
+                                    <ul class="dropdown-menu ui_dropdown-menu">
+                                        <li><a href="#" class="fun_dyna" data-dynamic="alter">修改</a></li>
+                                        <li><a href="#">删除</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="fun_type">非认证服务号</p>
+                            </td>
+                            <td>
+                                <p class="fun_channel_name">清新书阁1</p>
+                            </td>
+                            <td>
+                                <p class="fun_remark">--</p>
+                            </td>
+                            <td class="ui_operate">
+                                <div class="btn-group">
+                                    <span class="ui_operate_btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    </span>
+                                    <ul class="dropdown-menu ui_dropdown-menu">
+                                        <li><a href="#" class="fun_dyna" data-dynamic="alter">修改</a></li>
+                                        <li><a href="#">删除</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+                <div class="ui_g_pagination">
+                    <div id="demo11"><div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-14"><a href="javascript:;" class="layui-laypage-prev" data-page="1">上一页</a><a href="javascript:;" data-page="1">1</a><span class="layui-laypage-curr"><em class="layui-laypage-em"></em><em>2</em></span><a href="javascript:;" data-page="3">3</a><a href="javascript:;" data-page="4">4</a><a href="javascript:;" data-page="5">5</a><span class="layui-laypage-spr">…</span><a href="javascript:;" class="layui-laypage-last" title="尾页" data-page="10">10</a><a href="javascript:;" class="layui-laypage-next" data-page="3">下一页</a></div></div>
+                </div>
+            </div>
+
+            <div class="ui_ft">
+                <p>站内统计数据均会有10分钟左右延迟，请您知晓。</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="../js/jquery-1.7.2.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../layui.js"></script>
+<script src="../js/tools.js"></script><!--表单验证-->
+<script>
+    layui.use(['layer','form', 'element'], function () {
+        var layer = layui.layer,
+            element = layui.element;
+        //初始化
+        Editor.init();
+        // Editor.reader();
+    });
+
+    var Editor = {
+        hasInit: false,
+        itemid: null,
+        init: function () {
+            var me = this;
+            me.hasInit = true;//这里今后可以做回调
+            //初始化-具体执行方法
+            Editor.reader();
+            Editor.pageInit();
+
+        },
+        reader: function () {
+
+            var me = this;
+
+            $(document).on("click", ".cbtn", function () {
+                var ctoggle = $(this).attr("data-toggle");//通用点击属性
+                switch (ctoggle) {
+                    case "":
+                        layer.closeAll();
+                        break;
+                    default:
+                        break;
+                }
+            });
+        },
+        pageInit:function () {
+            var me = this;
+            $(document).on("click",".fun_dyna",function () {
+                var dynamic = $(this).attr("data-dynamic");//页面通用点击属性
+                switch (dynamic) {
+                    case "addNew":
+                        Editor.addNew();//点击新增入口
+                        break;
+                    case "alter":
+                        Editor.alter($(this));//点击新增入口
+                        break;
+                    case "closeTabsView":
+                        Editor.closeTabsView();//关闭新增菜单列表
+                        break;
+                    case "closeView":
+                        Editor.closeView();//关闭新增/修改视图
+                        break;
+                    default:
+                        break;
+                }
+            });
+        }
+        /*新增*/
+        ,addNew:function(){
+            Editor.popupView();//新增的弹出
+            Editor.clickInAddNew();
+            Editor.clearInput();//初始化表单(清空)
+        }
+        /*修改*/
+        ,alter:function(me){
+            Editor.popupViewInTabs();
+            Editor.reload(me);//回填
+        }
+        /*点击修改按钮获取本行数据 回填*/
+        ,reload:function(me){
+            var index;
+            var trEle = me.parents("tr");
+            var type = trEle.find(".fun_type").text();
+            var channelName = trEle.find(".fun_channel_name").text();
+            var remark = trEle.find(".fun_remark").text();
+            Editor.clearInput();//清空所有的input
+            //判断类型,确定index
+            switch (type) {
+                case "认证服务号":
+                    index = 0;
+                    break;
+                case "非认证服务号":
+                    index = 1;
+                    break;
+                case "H5":
+                    index = 2;
+                    break;
+                default:
+                    break;
+            }
+            Editor.tabChangeInAddNew(index);//根据index确定默认tab选项
+            Editor.reloadData(channelName,remark,index);//回填表单数据
+        }
+        /*新增的弹出*/
+        ,popupView:function(){
+            $(".fun_add_new_channel").show();
+        }
+        /*新增列表点击后的弹出*/
+        ,popupViewInTabs:function(){
+            $(".fun_new_channel").show();
+            // console.log("show");
+        }
+        /*关闭新增菜单列表*/
+        ,closeTabsView:function(){
+            $(".fun_add_new_channel").hide();
+        }
+        /*关闭新增/修改视图*/
+        ,closeView:function(){
+            $(".fun_new_channel").hide();
+        }
+        /*新增的弹出中点击*/
+        ,clickInAddNew:function(){
+            //1、点击事件
+            var btTabs = $(".fun_add_new_channel .fun_bt_tab li");
+            $.each(btTabs,function(index,item){
+                $(item).on("click",function(e){
+                    Editor.popupViewInTabs();
+                    Editor.closeTabsView();
+                    Editor.tabChangeInAddNew(index);
+                    /*初始化表单输入字数实时显示*/
+                    tools.wordStatic.init({
+                        ".fun_rz_name"      :".fun_rz_name_len",
+                        ".fun_rz_remark"    :".fun_rz_remark_len",
+                        ".fun_unrz_name"    :".fun_unrz_name_len",
+                        ".fun_unrz_remark"  :".fun_unrz_remark_len",
+                        ".fun_H5_name"      :".fun_H5_name_len",
+                        ".fun_H5_remark"    :".fun_H5_remark_len"
+                    });//初始化表单输入字数实时显示
+                });
+            });
+        }
+        /*新增的弹出中点击-中的确认操作*/
+        ,confirmInAddNew:function(){
+            //获取数据提交
+            Editor.ajax模拟();
+        }
+        /*新增的弹出中点击-切换*/
+        ,tabChangeInAddNew:function(index){
+            /*初始化tab切换*/
+            tools.Tabs.init({
+                ".fun_btTab_rz"     :".fun_uiTab_rz",
+                ".fun_btTab_unrz"   :".fun_uiTab_unrz",
+                ".fun_btTab_H5"     :".fun_uiTab_H5"
+            },index);//初始化tab切换
+        }
+        /*清空input和textare表单*/
+        ,clearInput:function(){
+            //清空input
+            $("input.fun_channel_name").val("");
+            //清空textarea
+            $("textarea.fun_remark").val("");
+        }
+        /*回填input和textare表单*/
+        ,reloadData:function(channelName,remark,index){
+            //判断索引,确定回填的数据
+            switch (index) {
+                case 0:
+                    //回填input
+                    $("input.fun_rz_name").val(channelName);
+                    //回填textarea
+                    $("textarea.fun_rz_remark").val(remark);
+                    break;
+                case 1:
+                    //回填input
+                    $("input.fun_unrz_name").val(channelName);
+                    //回填textarea
+                    $("textarea.fun_unrz_remark").val(remark);
+                    break;
+                case 2:
+                    //回填input
+                    $("input.fun_H5_name").val(channelName);
+                    //回填textarea
+                    $("textarea.fun_H5_remark").val(remark);
+                    break;
+                default:
+                    break;
+            }
+            /*初始化表单输入字数实时显示*/
+            tools.wordStatic.init({
+                ".fun_rz_name"      :".fun_rz_name_len",
+                ".fun_rz_remark"    :".fun_rz_remark_len",
+                ".fun_unrz_name"    :".fun_unrz_name_len",
+                ".fun_unrz_remark"  :".fun_unrz_remark_len",
+                ".fun_H5_name"      :".fun_H5_name_len",
+                ".fun_H5_remark"    :".fun_H5_remark_len"
+            });//初始化表单输入字数实时显示
+        }
+
+        /*ajax模拟数据*/
+        ,ajax模拟:function(){
+            $.ajax({
+                type: "post",
+                url: "/文件夹/json.json",//json格式的文件
+                data: {},
+                async: false,//同步获取注意
+                success: function (re, status) {
+                    var res = JSON.parse(re);
+                }
+            });
+
+        }
+    }
+</script>
+
+</body>
+</html>
+
+<!--点击新增后的弹出菜单模块-->
+<div class="modal fun_add_new_channel ui_add_new_channel">
+    <div id="add-new-channel" class="modal-content">
+
+        <div class="ui_hd">新增<span id="add-new-channel-close" class="ui_close fun_dyna" data-dynamic="closeTabsView" data-dismiss="modal"></span></div>
+
+        <div class="ui_bd clearfix">
+            <ul class="ui_bt_tab fun_bt_tab">
+                <li ><a href="javascript:void(0);" data-dismiss="modal"><span class="ui_icon ui_icon_PZN"></span>新增认证号</a></li>
+                <li ><a href="javascript:void(0);" data-dismiss="modal"><span class="ui_icon ui_icon_unPZN"></span>新增非认证号</a></li>
+                <li ><a href="javascript:void(0);" data-dismiss="modal"><span class="ui_icon ui_icon_H5"></span>新增H5</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!--点击新增后的弹出菜单模块-->
+<div id="new-channel" class="fun_new_channel" style="display: none">
+
+    <div class="ui_hd"><span id="new-channel-close" class="ui_close fun_dyna" data-dynamic="closeView"></span></div>
+
+    <div class="ui_bd clearfix">
+        <ul class="ui_bt_tab">
+            <li ><a href="javascript:void(0);" class="fun_btTab_rz"><span class="ui_icon ui_icon_PZN"></span>认证号</a></li>
+            <li ><a href="javascript:void(0);" class="fun_btTab_unrz"><span class="ui_icon ui_icon_unPZN"></span>非认证号</a></li>
+            <li ><a href="javascript:void(0);" class="fun_btTab_H5"><span class="ui_icon ui_icon_H5"></span>H5</a></li>
+        </ul>
+        <div class="ui_tab">
+
+            <div class="ui_tab_item fun_uiTab_rz" style="display: none">
+                <div class="ui_tab_item_hd">
+                    <p>基础设置1</p>
+                </div>
+                <div class="ui_tab_item_bd">
+                    <form action="">
+                        <input type="hidden" value="认证服务号" class="type">
+                        <div>
+                            <input type="text" placeholder="请输入渠道名称" class="ui_channel_name fun_channel_name fun_rz_name" maxlength="20">
+                            <span><i class="fun_rz_name_len">0</i>/20</span>
+                        </div>
+                        <div>
+                            <textarea name="remark" placeholder="可选填渠道备注" class="ui_remark fun_remark fun_rz_remark" maxlength="200"></textarea>
+                            <span><i class="fun_rz_remark_len">0</i>/200</span>
+                        </div>
+                    </form>
+                </div>
+                <div class="ui_tab_item_ft">
+                    <button class="ui_g_btn">确定</button>
+                </div>
+            </div>
+
+            <div class="ui_tab_item fun_uiTab_unrz" style="display: none">
+                <div class="ui_tab_item_hd">
+                    <p>基础设置2</p>
+                </div>
+                <div class="ui_tab_item_bd">
+                    <form action="">
+                        <input type="hidden" value="非认证服务号" class="type">
+                        <div>
+                            <input type="text" placeholder="请输入渠道名称" class="ui_channel_name fun_channel_name fun_unrz_name" maxlength="20">
+                            <span><i class="fun_unrz_name_len">0</i>/20</span>
+                        </div>
+                        <div>
+                            <textarea name="remark" placeholder="可选填渠道备注" class="ui_remark fun_remark fun_unrz_remark" maxlength="200"></textarea>
+                            <span><i class="fun_unrz_remark_len">0</i>/200</span>
+                        </div>
+                    </form>
+                </div>
+                <div class="ui_tab_item_ft">
+                    <button class="ui_g_btn">确定</button>
+                </div>
+            </div>
+
+            <div class="ui_tab_item fun_uiTab_H5" style="display: none">
+                <div class="ui_tab_item_hd">
+                    <p>基础设置3</p>
+                </div>
+                <div class="ui_tab_item_bd">
+                    <form action="">
+                        <input type="hidden" value="" class="type">
+                        <div>
+                            <input type="text" placeholder="请输入渠道名称" class="ui_channel_name fun_channel_name fun_H5_name" maxlength="20">
+                            <span><i class="fun_H5_name_len">0</i>/20</span>
+                        </div>
+                        <div>
+                            <textarea name="remark" placeholder="可选填渠道备注" class="ui_remark fun_remark fun_H5_remark" maxlength="200"></textarea>
+                            <span><i class="fun_H5_remark_len">0</i>/200</span>
+                        </div>
+                    </form>
+                </div>
+                <div class="ui_tab_item_ft">
+                    <button class="ui_g_btn">确定</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+

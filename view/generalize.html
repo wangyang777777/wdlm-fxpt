@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>推广</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/layui.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="layout-body">
+<div class="layout-admin">
+    <div class="header">
+        <div class="ui_header_container clearfix">
+            <div class="logo-icon">
+                <a href="javascript:void(0)"><img src="../images/logo.png" alt="微读联盟" width="84" height="30"></a>
+            </div>
+            <div class="loginbar">
+                <div class="message">
+                    <span class="red-spot"></span>
+                </div>
+                <div class="user">Lorem ipsum.</div>
+                <div class="ui_set_list fun_set_list">
+                    <a class="quit fun_quit_btn" ></a>
+                    <div class="ui_top_menu_list fun_top_menu_list" style="display: none;">
+                        <ul>
+                            <li><a href="javascript:void(0)">账号设置</a></li>
+                            <li><a href="javascript:void(0)">帮助中心</a></li>
+                            <li><a href="javascript:void(0)">退出</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="body">
+        <div class="sidebar">
+            <div class="side-scroll">
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="nav-tree fun_nav_list">
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/summary.html" class="cbtn"><span class="nav-icon nav-icon-summary"></span>概要</a></li>
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/data.html" class="cbtn"><span class="nav-icon nav-icon-data"></span>数据</a></li>
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/generalize.html" class="cbtn"><span class="nav-icon nav-icon-generalize"></span>推广</a></li>
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/recommend.html" class="cbtn"><span class="nav-icon nav-icon-recommend"></span>推荐商户</a></li>
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/withdrawDeposits.html" class="cbtn"><span class="nav-icon nav-icon-withdraw"></span>提现</a></li>
+                    <li class="nav-item"><a href="/layui-v2.2.5/layui/view/setting.html" class="cbtn" ><span class="nav-icon nav-icon-setting"></span>设置</a></li>
+                </ul>
+
+            </div>
+            <div class="QQ">
+                <div class="QQ-item"><a href="javascript:void(0)"><span class="QQ-icon"></span>客服QQ</a></div>
+                <div class="QQ-item"><a href="javascript:void(0)" class="QQ-item-gray"><span class="QQ-icon"></span>客服QQ</a></div>
+            </div>
+        </div>
+        <div id="generalize-list" class="content-main">
+            <div class="ui_generalize-content">
+                <!-- 内容主体区域 -->
+                <div class="ui_hd clearfix">
+                    <div class="ui_table_title">推广列表</div>
+                    <div class="ui_table_operation clearfix">
+                        <div class="ui_g_select">
+                            <!--引用的bootstrap-select-->
+                            <select class="selectpicker fun_dkState_select" data-width="100%" data-style="ui_radius ui_bgc_FFF">
+                                <option value="0" selected="">全部记录</option>
+                                <option value="1">已申请</option>
+                                <option value="2">待打款</option>
+                                <option value="2">已打款</option>
+                            </select>
+                        </div>
+
+                        <!-- 新增按钮 -->
+                        <div class="btn-group ui_g_ico_btn fun_dyna" data-toggle="modal" data-dynamic="addNew">
+                            <span class="ui_left_icon"></span>
+                            <span class="ui_btn_text">新增</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="ui_bd ui_generalize_table_view">
+                    <div>
+                        <table id="generalize_table" class="layui-table ui_g_table ui_generalize_table" lay-filter="test">
+                            <thead>
+                                <tr>
+                                    <th>入口页面</th>
+                                    <th>发布渠道</th>
+                                    <th>原文点击次数</th>
+                                    <th>新增阅读用户</th>
+                                    <th>充值金额</th>
+                                    <th>复制链接</th>
+                                    <th>编辑</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p title="《超级兵王》第一章《超级兵王》第一章">《超级兵王》第一章《超级兵王》第一章</p>
+                                        <p>关注章节： 第五章</p>
+                                    </td>
+                                    <td>
+                                        <p>清香书阁</p>
+                                        <p>
+                                            <span>
+                                                <span class="ui_attestation"></span><span>认证号</span>
+                                            </span>
+                                            <span>
+                                                <span class="ui_no_attestation">非认证号</span>
+                                            </span>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>1,245</p>
+                                    </td>
+                                    <td>
+                                        <p>45</p>
+                                    </td>
+                                    <td>
+                                        <p>¥89</p>
+                                    </td>
+                                    <td class="ui_copy_link">
+                                        <div>
+                                            <span class="ui_copy_btn"></span>
+                                            <span class="ui_QR_code_btn fun_QR_code_btn"></span>
+                                        </div>
+                                        <div class="ui_qrcode_modal" style="display: none;">
+                                            <div class="ui_QR_code_box">
+
+                                            </div>
+                                        </div>
+
+                                    </td>
+                                    <td class="ui_edit">
+
+                                        <div class="btn-group">
+                                            <span class="edit-btn ui_edit_btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
+                                            <ul class="dropdown-menu ui_dropdown-menu">
+                                                <li><a href="#" class="fun_dyna" data-dynamic="alter"><i class="layui-icon">&#xe642;</i>&nbsp;&nbsp;修改</a></li>
+                                                <li><a href="#"><i class="layui-icon">&#xe640;</i>&nbsp;&nbsp;删除</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div class="ui_g_pagination">
+                            <div id="demo11">
+                                <div class="layui-box layui-laypage layui-laypage-molv" id="layui-laypage-1"><span class="layui-laypage-count">共 2 条</span><span class="layui-laypage-skip">到第<input type="text" min="1" value="1" class="layui-input">页<button type="button" class="layui-laypage-btn">确定</button></span><a href="javascript:;" class="layui-laypage-prev layui-disabled" data-page="0">上一页</a><span class="layui-laypage-curr"><em class="layui-laypage-em" style="background-color:#FBAB21;"></em><em>1</em></span><a href="javascript:;" class="layui-laypage-next layui-disabled" data-page="2">下一页</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui_ft">
+                    <p>站内统计数据均会有10分钟左右延迟，请您知晓。</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+<script src="../js/jquery-1.7.2.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/bootstrap-select.min.js"></script>
+<script src="../layui.js"></script>
+<script src="../js/tools.js"></script><!--表单验证-->
+
+<script>
+    var data = {
+        isBookDetailShow:false
+    };
+    var test = {
+        code: [
+            { "code": "1001", "name": "精品页" ,"icon":"ui_add_icon_quality"},
+            { "code": "1002", "name": "书架页" ,"icon":"ui_add_icon_bookrack"},
+            { "code": "1003", "name": "分类页" ,"icon":"ui_add_icon_classify"},
+            { "code": "1004", "name": "章节推文" ,"icon":"ui_add_icon_chapter"}
+        ]
+    }
+
+    layui.use(['layer','form', 'element'], function () {
+        var layer = layui.layer,
+            element = layui.element;
+        //初始化
+        Editor.init();
+        // Editor.reader();
+
+    });
+
+    layui.use(['form', 'layedit', 'laydate'], function(){
+        var form = layui.form
+            ,layer = layui.layer;
+
+        //监听提交
+        form.on('submit(demo1)', function(data){
+            layer.alert(JSON.stringify(data.field), {
+                title: '最终的提交信息'
+            });
+            return false;
+        });
+    });
+
+    var Editor = {
+        hasInit: false,
+        itemid: null,
+        init: function () {
+            var me = this;
+            me.hasInit = true;//这里今后可以做回调
+            //初始化-具体执行方法
+            Editor.reader();
+            Editor.pageInit();
+        },
+        reader: function () {
+            var me = this;
+            $(document).on("click", ".cbtn", function () {
+                var ctoggle = $(this).attr("data-toggle");//通用点击属性
+                switch (ctoggle) {
+                    case "add":
+                        layer.closeAll();
+                        break;
+                    default:
+                        break;
+                }
+            });
+            //隐藏表单的错误提示框
+            $(document).on("focus", ".cbtn", function () {
+                var ctoggle = $(this).attr("data-toggle");//通用点击属性
+                switch (ctoggle) {
+                    case "":
+                        break;
+                    default:
+                        break;
+                }
+            });
+        }
+        ,pageInit:function () {
+            var me = this;
+            tools.setUiFooterLocation();
+            Editor.showOrHideQRCode();
+            Editor.showOrHideTopMenuList();
+            $(document).on("click",".fun_dyna",function () {
+                var dynamic = $(this).attr("data-dynamic");//页面通用点击属性
+                switch (dynamic) {
+                    case "addNew":
+                        Editor.addNew();//点击新增入口
+                        break;
+                    case "showBookDetail":
+                        Editor.showBookDetail();//点击新增入口
+                        break;
+                    default:
+                        break;
+                }
+            });
+
+            //
+            // Editor.ajaxRequest({
+            //     url     : "/list",
+            //     type    :"GET",
+            //     data    :{},
+            //     dataType: 'json',
+            //     success:function (result,status) {
+            //         // console.log(result);
+            //     }
+            // });
+            /*fun_new_generalize_nav中tab栏点击事件*/
+            $('.fun_add_new_generalize a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                // 获取已激活的标签页的名称
+                var activeTab = $(e.target).text();
+                $(".fun_tab_active_name").text(activeTab);//实时显示选中的tab的名称
+            });
+            //
+            $('.fun_new_generalize_nav').on('shown.bs.modal', function (e) {
+                // ajax请求li 列表数据
+                var data = test.code;
+                // console.log(data);
+                // 数据渲染tab列表
+                Editor.tab_init($(".fun_bt_tab"),$(".fun_add_tab-content"),data,0);
+
+            });
+            $('.fun_add_new_generalize').on('shown.bs.modal', function (e) {
+                // ajax请求li 列表数据
+                var data = test.code;
+                // console.log(data);
+                // 数据渲染tab列表
+                Editor.tab_init($(".fun_add_tab"),$(".fun_add_tab-content"),data,1);//初始化tab切换
+                Editor.showTabName();//实时显示被选中的tab名称
+
+            });
+        }
+
+        /*新增*/
+        ,addNew: function () {
+            Editor.showAddNav();//弹出新增列表
+            Editor.clickInAddNew();//tab点击事件
+        }
+
+        /*弹出 fun_new_generalize_nav 模态框 */
+        ,showAddNav: function () {
+            $('.fun_new_generalize_nav').modal("show");
+        }
+
+        /*隐藏 fun_new_generalize_nav 模态框 */
+        ,hideAddNav: function () {
+            $('.fun_new_generalize_nav').modal("hide");
+            $(".modal-backdrop").remove();
+        }
+
+        /*新增的弹出中点击*/
+        ,clickInAddNew:function(){
+            //1、点击事件
+            var btTabs = $(".fun_new_generalize_nav .fun_bt_tab li");
+            $.each(btTabs,function(index,item){
+                $(item).on("click",function(e){
+                    Editor.hideAddNav();
+                    Editor.showAddGeneralize();
+                    Editor.initWhichTab(index);
+                });
+            });
+        }
+
+        /*弹出fun_add_new_generalize */
+        ,showAddGeneralize:function(){
+            $('.fun_add_new_generalize').modal("show");
+        }
+
+        /*隐藏fun_add_new_generalize */
+        ,hideAddGeneralize:function(){
+            $('.fun_add_new_generalize').modal("hide");
+            $(".modal-backdrop").remove();
+        }
+
+        /*初始化，默认显示某一个tab */
+        ,initWhichTab:function(index){
+            $('#add_new_generalize .fun_add_tab a').eq(index).tab('show');//初始化显示哪个tab
+        }
+        /*ajax请求通用函数*/
+        ,ajaxRequest:function(param){
+            var _this = this;
+            $.ajax({
+                type        : param.type    || 'GET',
+                url         : param.url     || '',
+                dataType    : param.dataType|| 'json',
+                data        : param.data    || '',
+                success     : function(result,status,xhr){
+                    console.log(status);
+                    // 请求成功
+                    if(0 === result.status){
+                        typeof param.success === 'function' && param.success(result,status);
+                    }
+                    // 请求数据错误
+                    else if(1 === result.status){
+                        typeof param.error === 'function' && param.error(result.msg);
+                    }
+                },
+                error       : function(err){
+                    typeof param.error === 'function' && param.error(err.statusText);
+                }
+            });
+        }
+        /*tab标签动态获取初始化*/
+        ,tab_init:function (targetTab,targetTabContent,data,type) {
+            targetTab.children().remove();
+            $.each(data,function (i, item) {
+                targetTabContent.children(".tab-pane").eq(i).attr("id",item.code);
+
+                var li = $('<li></li>');
+                var a = $('<a href="#'+item.code+'" data-toggle="tab"></a>');
+                if(type==0){
+                    // 新增按钮直接弹出的
+                    var spanIcon = $('<span class="ui_icon"></span>');
+                    var text = $('<span>'+'新增'+item.name+'</span>');
+
+                }else if(type==1){
+                    var spanIcon = $('<span class="ui_add_icon"></span>');
+                    var text = $('<span>'+item.name+'</span>');
+                }
+                spanIcon.addClass(item.icon);
+                a.append(spanIcon);
+                a.append(text);
+                li.append(a);
+                targetTab.append(li);
+            })
+        }
+
+        /*实时显示被选中的tab的名称*/
+        ,showTabName:function () {
+            /*fun_new_generalize_nav中tab栏点击事件*/
+            $('.fun_add_new_generalize a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                // 获取已激活的标签页的名称
+                var activeTab = $(e.target).text();
+                $(".fun_tab_active_name").text(activeTab);//实时显示选中的tab的名称
+                //获取选中的tab的id
+                var id=$(e.target).attr("href");
+                //选中后加载对应的tab-content的内容
+                Editor.tabShow(id);
+            });
+        }
+        /*tab选中后的操作*/
+        ,tabShow:function (data) {
+            switch (data) {
+                case "#1001":
+
+                    break;
+                case "#1002":
+
+                    break;
+                case "#1003":
+                    Editor.show1003();
+
+                    break;
+                case "#1004":
+                    Editor.show1004();
+                    Editor.clickzjtwBtn();
+                    break;
+                default:
+                    break;
+            }
+        }
+        /*加载章节推文页面*/
+        ,show1003:function () {
+            $(".fun_classify_page").append($(".fun_classify_page_body"));
+        }
+        /*加载章节推文页面*/
+        ,show1004:function () {
+            $(document.body).append($(".fun_book_chapter"));
+            $(".fun_tab_chapter_page .fun_tab_chapter_box").append($(".fun_add_select_nav"));
+            $(".fun_tab_chapter_page .fun_tab_chapter_box").append($(".fun_add_list"));
+            $(".fun_tab_chapter_page .fun_tab_chapter_box").append($(".fun_g_pagination"));
+            data.isBookDetailShow = false;
+        }
+        /*再次点击章节推文返回一级菜单*/
+        ,returnhow1004: function () {
+            if(data.isBookDetailShow){
+                Editor.show1004();
+            }
+        }
+        /*显示书籍章节列表*/
+        ,showBookDetail: function () {
+            $(document.body).append($(".fun_add_select_nav"));
+            $(document.body).append($(".fun_add_list"));
+            $(document.body).append($(".fun_g_pagination"));
+            //请求数据
+
+            //加载
+            $(".fun_tab_chapter_page .fun_tab_chapter_box").append($(".fun_book_chapter"));
+            data.isBookDetailShow = true;
+        }
+        /*点击章节列表*/
+        ,clickzjtwBtn: function () {
+            $("a[href='#1004']").on("click",function(e){
+                Editor.returnhow1004();
+            });
+        }
+        /*鼠标悬浮显示二维码事件，鼠标移除隐藏二维码事件*/
+        ,showOrHideQRCode: function () {
+            $(".fun_QR_code_btn").mouseenter(function (e) {
+                var qrcode_modal = $(e.target).parents("td.ui_copy_link").find(".ui_qrcode_modal");
+                qrcode_modal.show();
+            });
+            $(".fun_QR_code_btn").mouseleave(function () {
+                $(".ui_qrcode_modal").hide();
+            })
+        }
+        /*退出登录悬浮事件，鼠标进入显示列表，移除隐藏*/
+        ,showOrHideTopMenuList: function () {
+            $(".fun_quit_btn").mouseenter(function () {
+                $(".fun_top_menu_list").show();
+            });
+            $(".fun_set_list").mouseleave(function () {
+                $(".fun_top_menu_list").hide();
+            })
+        }
+
+
+    }
+
+</script>
+</body>
+</html>
+
+<!--点击新增后的弹出菜单模块-->
+<div class="modal fun_new_generalize_nav">
+    <div class="modal-content ui_new_generalize_nav">
+
+        <div class="ui_hd">
+            <span>新增</span>
+            <span class="ui_close" data-dismiss="modal"></span>
+        </div>
+
+        <div class="ui_bd clearfix">
+            <ul class="ui_bt_tab fun_bt_tab">
+                <!--<li><a href="javascript:void(0)" data-dismiss="modal" data-toggle="tab"><span class="ui_icon ui_add_icon_quality"></span><span>新增精品页</span></a></li>-->
+                <!--<li><a href="javascript:void(0)" data-dismiss="modal" data-toggle="tab"><span class="ui_icon ui_add_icon_bookrack"></span><span>新增书架页</span></a></li>-->
+                <!--<li><a href="javascript:void(0)" data-dismiss="modal" data-toggle="tab"><span class="ui_icon ui_add_icon_classify"></span><span>新增分类页</span></a></li>-->
+                <!--<li><a href="javascript:void(0)" data-dismiss="modal" data-toggle="tab"><span class="ui_icon ui_add_icon_chapter"></span><span>新增章节推文</span></a></li>-->
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="modal fun_add_new_generalize">
+    <div id="add_new_generalize" class="ui_add_new_generalize" >
+
+        <div class="ui_add_title">
+            <span class="fun_tab_active_name">新增</span>
+            <span class="ui_add_close cbtn" data-toggle="close" data-dismiss="modal"></span>
+        </div>
+        <!-- 新增区域（可配合layui已有的垂直导航） -->
+        <div class="ui_add_body clearfix">
+            <ul class="ui_add_tab fun_add_tab">
+                <!--<li><a href="#1001" data-toggle="tab"><span class="ui_add_icon ui_add_icon_quality"></span>精品页</a></li>-->
+                <!--<li><a href="#1002" data-toggle="tab"><span class="ui_add_icon ui_add_icon_bookrack"></span>书架页</a></li>-->
+                <!--<li><a href="#1003" data-toggle="tab"><span class="ui_add_icon ui_add_icon_classify"></span>分类页</a></li>-->
+                <!--<li><a href="#1004" data-toggle="tab"><span class="ui_add_icon ui_add_icon_chapter"></span>章节推文</a></li>-->
+            </ul>
+            <div class="tab-content ui_add_content_box fun_add_tab-content">
+
+                <div class="tab-pane ui_add_content fun_add_jingpin">
+                    新增精品页
+                </div>
+
+                <div class="tab-pane ui_add_content">
+                    新增书架页
+                </div>
+
+                <div class="tab-pane ui_add_content ui_classify_page fun_classify_page">
+
+                </div>
+
+                <div class="tab-pane ui_add_content ui_add_content_chapter fun_tab_chapter_page clearfix">
+                    <div class="ui_tab_chapter_box fun_tab_chapter_box">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--条件搜索select框-->
+<div class=" ui_add_nav fun_add_select_nav" aria-hidden=”true” data-backdrop=”static”>
+    <div class="">
+        <div class="ui_select_form_item ui_g_select" >
+            <!--引用的bootstrap-select-->
+            <select name="classify" class="selectpicker" data-width="100%" data-style="ui_radius ui_bgc_FFF">
+                <option value="">请选择分类</option>
+                <option value="0" selected="">玄幻</option>
+                <option value="1">都市</option>
+                <option value="2">惊悚</option>
+            </select>
+        </div>
+        <div class="ui_select_form_item ui_g_select" >
+            <!--引用的bootstrap-select-->
+            <select name="recommendLevel" class="selectpicker" data-width="100%" data-style="ui_radius ui_bgc_FFF">
+                <option value="">请选择派单级别</option>
+                <option value="0" selected="">100</option>
+                <option value="1">>=90</option>
+                <option value="2"><90</option>
+            </select>
+        </div>
+        <div class="ui_select_form_item ui_g_select" >
+            <!--引用的bootstrap-select-->
+            <select name="updateStatus" class="selectpicker" data-width="100%" data-style="ui_radius ui_bgc_FFF">
+                <option value="">请选择更新状态</option>
+                <option value="0" selected="">已完结</option>
+                <option value="1">连载中</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+
+<!--分类页-->
+<div class="ui_classify_page_body fun_classify_page_body">
+    <div class="ui_classify_page_content">
+        <div class="ui_img_box">
+            <div class="ui_iframe">
+                <iframe src="http://huying.ikanshu.cn/wread/wxread.htm?p=home" height="100%" width="100%" frameborder="0" scrolling="yes"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="ui_page_handle_classify ui_page_handle_lay clearfix">
+        <div class="float-l">
+            <div class="clearfix">
+                <div class="ui_form_title float-l">派单渠道类型:</div>
+
+                <div class="ui_form_body float-r">
+                    <div class="ui_select_form_item" >
+                        <select name="channels" class="selectpicker" data-width="100%" data-style="ui_radius ui_bgc_FFF">
+                            <option value="">请选择分类</option>
+                            <option value="0" selected="">玄幻</option>
+                            <option value="1">都市</option>
+                            <option value="2">惊悚</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="float-r ui_create_link">
+            <button class="ui_g_btn ui_g_btn_yellow">生成分类页链接</button>
+        </div>
+    </div>
+</div>
+
+<!--图书详情-->
+<div class=" ui_add_list fun_add_list" aria-hidden=”true” data-backdrop=”static”>
+    <ul class="clearfix ui_book_list">
+        <li class="clearfix fun_dyna" data-dynamic="showBookDetail">
+            <div class="ui_book_img">
+                <img src="//cdn.ikanshu.cn/book_covers/&#10;60003253.jpg">
+            </div>
+            <div class="ui_book_info">
+                <p class="ui_book_title" title="修罗武神修罗武神修罗武神">
+                    修罗武神修罗武神修罗武神
+                </p>
+                <div class="ui_book_classify">
+                    <span>玄幻</span>&nbsp;&nbsp;
+                    <span class="ui_gender_F">男生</span>
+                    <span class="ui_gender_M">女生</span>
+                </div>
+                <div class="ui_book_label clearfix">
+                    <span>热度</span>
+                    <span>传奇</span>
+                    <span>然</span>
+                    <span>然</span>
+                    <span>然</span>
+                </div>
+                <div class="ui_book_update_date">最近更新：<span>2017-08-29</span></div>
+                <div class="ui_book_recommend_level">推荐度：<span>100</span></div>
+                <div class="ui_book_update_status">
+                    <img src="../images/serialize_2x.png" alt="连载中">
+                    <!--<img src="../images/end_2x.png" class="serialize" alt="已完结">-->
+                </div>
+            </div>
+        </li>
+        <li class="clearfix fun_dyna" data-dynamic="showBookDetail">
+            <div class="ui_book_img">
+                <img src="//cdn.ikanshu.cn/book_covers/&#10;60003253.jpg">
+            </div>
+            <div class="ui_book_info">
+                <p class="ui_book_title" title="修罗武神修罗武神修罗武神">
+                    修罗武神修罗武神修罗武神
+                </p>
+                <div class="ui_book_classify">
+                    <span>玄幻</span>&nbsp;&nbsp;
+                    <span class="ui_gender_F">男生</span>
+                    <span class="ui_gender_M">女生</span>
+                </div>
+                <div class="ui_book_label clearfix">
+                    <span>热度</span>
+                    <span>传奇</span>
+                    <span>然</span>
+                    <span>然</span>
+                    <span>然</span>
+                </div>
+                <div class="ui_book_update_date">最近更新：<span>2017-08-29</span></div>
+                <div class="ui_book_recommend_level">推荐度：<span>100</span></div>
+                <div class="ui_book_update_status">
+                    <!--<img src="../images/serialize_2x.png" alt="连载中">-->
+                    <img src="../images/end_2x.png" class="serialize" alt="已完结">
+                </div>
+            </div>
+        </li>
+
+    </ul>
+</div>
+
+
+<div class=" ui_add_list ui_book_chapter fun_book_chapter" aria-hidden=”true” data-backdrop=”static”>
+    <div class="float-l">
+        <ul class="clearfix ui_book_list ui_book_detail">
+            <li class="clearfix fun_dyna" data-dynamic="showBookDetail">
+                <div class="ui_book_img">
+                    <img src="//cdn.ikanshu.cn/book_covers/&#10;60003253.jpg">
+                </div>
+                <div class="ui_book_info">
+                    <p class="ui_book_title" title="修罗武神修罗武神修罗武神">
+                        修罗武神修罗武神修罗武神
+                    </p>
+                    <div class="ui_book_classify">
+                        <span>玄幻</span>&nbsp;&nbsp;
+                        <span class="ui_gender_F">男生</span>
+                        <span class="ui_gender_M">女生</span>
+                    </div>
+                    <div class="ui_book_label clearfix">
+                        <span>热度</span>
+                        <span>传奇</span>
+                        <span>然</span>
+                        <span>然</span>
+                        <span>然</span>
+                    </div>
+                    <div class="ui_book_update_date">最近更新：<span>2017-08-29</span></div>
+                    <div class="ui_book_recommend_level">推荐度：<span>100</span></div>
+                    <div class="ui_book_update_status">
+                        <img src="../images/serialize_2x.png" alt="连载中">
+                        <!--<img src="../images/end_2x.png" class="serialize" alt="已完结">-->
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <!--图书章节列表-->
+        <div class="fun_chapter_list_box">
+            <!--章节推文每个列表li元素点击后的详情页面-->
+            <ul class="ui_chapter_list fun_chapter_list">
+                <li class="active"><a href="javascript:void(0)" data-toggle="tab">第一章 这里是对应章 <span>官推章节</span></a></li>
+                <li><a href="javascript:void(0)" data-toggle="tab">第一章 这里是对应章<span></span></a></li>
+                <li><a href="javascript:void(0)" data-toggle="tab">第一章 这里是对应章这里是里是里是对应章<span>官推章节</span></a></li>
+                <li><a href="javascript:void(0)" data-toggle="tab">第一章 这里是对应章<span></span></a></li>
+
+            </ul>
+        </div>
+    </div>
+    <div>
+        <!--章节推文每个列表li元素点击后的详情页面-->
+        <div class="ui_chapter_content fun_chapter_content">
+            <div class="ui_chapter_page">
+                <div class="tab-content ui_page_content">
+
+                    <!--图文模式-->
+                    <div class="tab-pane ui_tab_pane ui_model active" id="img_model">
+                        <div class="ui_content_box">
+                            <div class="ui_hd_img">
+                                <img src="//cdn.ikanshu.cn/book_covers/&#10;60003253.jpg" style="width: 100%;">
+                            </div>
+
+                            <div class="ui_bd_text">
+                                <div class="ui_title_box">
+                                    <span class="ui_title">推荐标题标题推荐推荐标题</span>
+                                </div>
+                                <div class="ui_text_content_box">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi et excepturi fuga ipsa necessitatibus possimus, quo ut voluptatum! Accusamus amet aperiam consequuntur et, fugit id iste magni nulla praesentium quasi reprehenderit voluptas, voluptatum! Aperiam assumenda commodi inventore natus reprehenderit sed.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi et excepturi fuga ipsa necessitatibus possimus, quo ut voluptatum! Accusamus amet aperiam consequuntur et, fugit id iste magni nulla praesentium quasi reprehenderit voluptas, voluptatum! Aperiam assumenda commodi inventore natus reprehenderit sed.</p>
+                                </div>
+                            </div>
+
+                            <div class="ui_ft_gif">
+                                <img src="http://pic.58pic.com/58pic/14/15/12/58W58PIC4gk_1024.jpg" style="width: 100%; height: 74px;">
+                            </div>
+
+                        </div>
+                        <div class="ui_handle_list">
+                            <ul>
+                                <li class="ui_handle_item"><a href="javascript:;" class="ui_list_btn"><span class="ui_btn_icon ui_hyh_btn_icon"></span>换图片</a></li>
+                                <li class="ui_handle_item"><a href="javascript:;" class="ui_list_btn"><span class="ui_btn_icon ui_hyh_btn_icon"></span>换标题</a></li>
+                                <li class="ui_handle_item"><a href="javascript:;" class="ui_list_btn"><span class="ui_btn_icon ui_hyh_btn_icon"></span>换动图</a></li>
+                                <li class="ui_handle_item"><a href="javascript:;" class="ui_list_btn"><span class="ui_btn_icon ui_copy_btn_icon"></span>复制</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui_page_handle_chapter ui_page_handle_lay clearfix">
+                    <div class="float-l">
+                        <div class="clearfix">
+                            <div class="ui_form_title float-l">派单渠道类型:</div>
+
+                            <div class="ui_form_body float-r">
+                                <div class="ui_select_form_item" >
+                                    <select class="ui_select select_channel_zj">
+                                        <option value="0,4">初始渠道</option>
+                                        <option value="1,1">微信-中文书城测试001</option>
+                                        <option value="2,3">H5-中文书城测试001</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div cla"float-r ui_create_link">
+                        <button class="ui_g_btn ui_g_btn_yellow">生成原文链接</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--引用的分页组件-->
+<div class=" ui_g_pagination fun_g_pagination" aria-hidden=”true” data-backdrop=”static”>
+    <div id="" class=""><div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-14"><a href="javascript:;" class="layui-laypage-prev" data-page="1">上一页</a><a href="javascript:;" data-page="1">1</a><span class="layui-laypage-curr"><em class="layui-laypage-em"></em><em>2</em></span><a href="javascript:;" data-page="3">3</a><a href="javascript:;" data-page="4">4</a><span class="layui-laypage-spr">…</span><a href="javascript:;" class="layui-laypage-last" title="尾页" data-page="10">10</a><a href="javascript:;" class="layui-laypage-next" data-page="3">下一页</a></div></div>
+</div>
+
